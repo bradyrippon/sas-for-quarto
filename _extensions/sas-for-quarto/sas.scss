@@ -1,0 +1,75 @@
+
+/* base design for all code blocks on revealjs slides */
+.reveal pre code {
+  font-family: "Consolas", "Courier New", monospace !important;
+  font-size: 0.9em !important;
+  background-color: #f7f7fb !important;
+  padding: 0.6em 0.8em !important;
+  border-radius: 6px !important;
+  display: block !important;
+  border: 1px solid #e0e0f0 !important;
+}
+
+/* explicitly include sas labelled blocks */
+.reveal pre code.language-sas,
+.reveal pre code.sas,
+.reveal code.hljs.language-sas {
+  background-color: #f7f7fb !important;
+}
+
+/* ----- highlighting classes ----- */
+
+/* keywords: DATA, SET, PROC, RUN, ... */
+.reveal .sourceCode .kw,
+.reveal code span.kw {
+  color: #0033cc !important;
+  font-weight: bold !important;
+}
+
+/* comments */
+.reveal .sourceCode .co,
+.reveal code span.co {
+  color: #008000 !important;
+  font-style: italic !important;
+}
+
+/* strings */
+.reveal .sourceCode .st,
+.reveal code span.st {
+  color: #a31515 !important;
+}
+
+/* numbers */
+.reveal .sourceCode .dv,
+.reveal .sourceCode .bn,
+.reveal .sourceCode .fl,
+.reveal code span.dv,
+.reveal code span.bn,
+.reveal code span.fl {
+  color: #800080 !important;
+}
+
+/* ----- highlight.js-style classes ----- */
+
+/* keywords */
+.reveal .hljs-keyword,
+.reveal .hljs-built_in {
+  color: #0033cc !important;
+  font-weight: bold !important;
+}
+
+/* comments */
+.reveal .hljs-comment {
+  color: #008000 !important;
+  font-style: italic !important;
+}
+
+/* strings */
+.reveal .hljs-string {
+  color: #a31515 !important;
+}
+
+/* numbers */
+.reveal .hljs-number {
+  color: #800080 !important;
+}

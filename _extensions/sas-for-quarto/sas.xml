@@ -1,0 +1,109 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language SYSTEM "language.dtd">
+
+<language name="sas"
+          version="1.0"
+          kateversion="5.0"
+          section="Scientific"
+          extensions="*.sas"
+          mimetype="text/x-sas">
+
+  <highlighting>
+
+    <!-- SAS keywords and common PROC names -->
+    <list name="sas_keywords">
+      <!-- core step keywords -->
+      <item>proc</item>
+      <item>data</item>
+      <item>set</item>
+      <item>run</item>
+      <item>if</item>
+      <item>then</item>
+      <item>else</item>
+      <item>do</item>
+      <item>end</item>
+      <item>where</item>
+      <item>var</item>
+      <item>by</item>
+      <item>output</item>
+      <item>retain</item>
+      <item>tables</item>
+      <item>infile</item>
+      <item>input</item>
+      <item>format</item>
+      <item>length</item>
+      <item>label</item>
+      <item>title</item>
+      <item>footnote</item>
+      <item>libname</item>
+      <item>quit</item>
+
+      <!-- common PROC names (add more as you like) -->
+      <item>print</item>
+      <item>means</item>
+      <item>freq</item>
+      <item>univariate</item>
+      <item>sgplot</item>
+      <item>sgpanel</item>
+      <item>corr</item>
+      <item>reg</item>
+      <item>glm</item>
+      <item>mixed</item>
+      <item>logistic</item>
+      <item>phreg</item>
+      <item>lifetest</item>
+      <item>sql</item>
+      <item>sort</item>
+      <item>transpose</item>
+      <item>contents</item>
+      <item>format</item>
+      <item>datasets</item>
+    </list>
+
+    <contexts>
+      <context name="Normal" attribute="Normal" lineEndContext="#stay">
+
+        <!-- keywords + proc names -->
+        <keyword attribute="Keyword" context="#stay" String="sas_keywords"/>
+
+        <!-- block comments: /* ... */ -->
+        <RegExpr attribute="Comment" context="#stay" String="/\*.*\*/"/>
+
+        <!-- line comments: * ... ; at start/indented -->
+        <RegExpr attribute="Comment" context="#stay" String="^\s*\*.*?;"/>
+
+        <!-- double-quoted strings -->
+        <RegExpr attribute="String" context="#stay"
+                 String="&quot;([^&quot;\\]|\\.)*&quot;"/>
+
+        <!-- single-quoted strings -->
+        <RegExpr attribute="String" context="#stay"
+                 String="'([^'\\]|\\.)*'"/>
+
+        <!-- numbers -->
+        <RegExpr attribute="Number" context="#stay"
+                 String="\b[0-9]+(\.[0-9]+)?\b"/>
+
+      </context>
+    </contexts>
+
+    <itemDatas>
+      <itemData name="Normal"  defStyleNum="dsNormal"/>
+      <itemData name="Keyword" defStyleNum="dsKeyword"/>
+      <itemData name="Comment" defStyleNum="dsComment"/>
+      <itemData name="String"  defStyleNum="dsString"/>
+      <itemData name="Number"  defStyleNum="dsDecVal"/>
+    </itemDatas>
+
+  </highlighting>
+
+  <general>
+    <comments>
+      <comment name="multiLine" start="/*" end="*/"/>
+      <comment name="singleLine" start="*" end=";"/>
+    </comments>
+  </general>
+
+</language>
+
