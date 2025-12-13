@@ -1,22 +1,18 @@
-# <%= title %> Format
+# SAS for Quarto
 
 ## Installing
 
-*TODO*: Replace the `<github-organization>` with your GitHub organization.
+You can download this extension in temrinal with:
 
 ```bash
-quarto use template <github-organization>/<%= filesafename %>
+quarto install extension bradyrippon/sas-for-quarto
 ```
 
-This will install the extension and create an example qmd file that you can use as a starting place for your article.
+**Note**: You can also check you current extensions with:
 
-## Using
-
-*TODO*: Describe how to use your format.
-
-## Format Options
-
-*TODO*: If your format has options that can be set via document metadata, describe them.
+```bash
+quarto list extensions
+```
 
 ## Example
 
