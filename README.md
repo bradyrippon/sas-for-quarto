@@ -27,7 +27,17 @@ proc means data=sashelp.class;
   var height weight;
 run;
 ```
+
 ```
+
+
+
+```sas
+proc means data=sashelp.class;
+  var height weight;
+run;
+```
+
 
 ## Example
 
