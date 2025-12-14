@@ -19,15 +19,35 @@ pre {
   margin: 1em 0;
 }
 
-/* SAS fences specifically */
-pre code.language-sas {
+
+
+/* ----- SAS fences ----- */
+
+pre.sas {
+  background-color: #f7f7fb;
+  border: 1px solid #e0e0f0;
+  border-left: 4px solid #c41e3a;
+  border-radius: 8px;
+  padding: 0;
+}
+
+pre.sas > code {
+  border: none;
+  background: transparent;
+}
+
+/* support other potential SAS class patterns */
+pre code.language-sas,
+pre code.sas,
+pre.sourceCode code.language-sas,
+pre.sourceCode code.sas {
   border-left: 4px solid #c41e3a;
 }
 
 /* make inline code softer tone */
 code:not(pre code) {
   background-color: rgba(247, 247, 251, 0.85);
-  border: 1px solid rgba(224, 224, 240, 0.8);
+  border: 1px solid rgba(224, 224, 240, 0.80);
   border-radius: 6px;
   padding: 0.08em 0.35em;
 }
