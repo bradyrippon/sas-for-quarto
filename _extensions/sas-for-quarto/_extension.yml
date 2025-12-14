@@ -5,9 +5,10 @@ quarto-required: ">=1.5.0"
 
 contributes:
   formats:
-    revealjs:
-      theme: [dark, custom.scss]
-      syntax-definitions: [sas.xml]
-      # optional, but often useful:
-      # highlight-style: pygments
+    sas-html:
+      inherits: html
+      syntax-definitions:
+        - sas.xml
+      css:
+        - sas.css
 
