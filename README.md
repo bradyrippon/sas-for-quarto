@@ -14,31 +14,7 @@ quarto add bradyrippon/sas-for-quarto
 quarto list extensions
 ```
 
-```qmd
----
-title: "SAS in Quarto"
-format: html
-filters:
-  - sas-for-quarto
----
-
-```{}
-proc means data=sashelp.class;
-  var height weight;
-run;
-```
-
-```
-
-
-
-```sas
-proc means data=sashelp.class;
-  var height weight;
-run;
-```
-
-
 ## Example
 
 Here is the source code for a minimal sample document: [example.qmd](example.qmd).
+
