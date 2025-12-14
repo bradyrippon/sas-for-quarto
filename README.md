@@ -2,16 +2,31 @@
 
 ## Installing
 
-You can download this extension in temrinal with:
+You can download this extension in terminal with:
 
 ```bash
-quarto install extension bradyrippon/sas-for-quarto
+quarto add bradyrippon/sas-for-quarto
 ```
 
 **Note**: You can also check you current extensions with:
 
 ```bash
 quarto list extensions
+```
+
+```qmd
+---
+title: "SAS in Quarto"
+format: html
+filters:
+  - sas-for-quarto
+---
+
+```{}
+proc means data=sashelp.class;
+  var height weight;
+run;
+```
 ```
 
 ## Example
